@@ -22,7 +22,7 @@ header {
 }
 
 header button {
-  background-color: white;
+  background-color: hsl(0, 0%, 98%);
   border: none;
   cursor: pointer;
 }
@@ -106,15 +106,22 @@ header button {
 .CountryPage {
   font-size: 16px;
 }
+
+.CountryPage button {
+  margin: 20px 80px;
+  padding: 10px 30px;
+}
+
 .countrypage-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
   width: 100%;
+  padding: 20px 80px;
 }
 
 .flag-container {
-  width: 100%;
+  width: 80%;
   height: 20rem;
 }
 
@@ -125,11 +132,23 @@ header button {
   object-fit: cover;
 }
 
+.countrypage-data {
+  margin: 20px;
+}
+
 .countrypage-info{
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 
+.right-col {
+  margin-left: 120px;
+}
+.countrypage-links{
+  margin-top: 80px;
+}
 .bold {
   font-weight: 800
 }
