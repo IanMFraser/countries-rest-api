@@ -5,7 +5,7 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     return(
         <header>
-            <h1>Where in the world?</h1>
+            <h2>Where in the world?</h2>
             <button><FontAwesomeIcon icon={faMoon} /> Dark Mode</button>
         </header>
     

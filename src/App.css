@@ -16,9 +16,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px; 
+  padding: 20px 60px; 
   font-weight: 800;
   border-bottom: 3px solid hsl(0, 0%, 93%) ;
+  font-size: 14px;
 }
 
 header button {
@@ -105,24 +106,30 @@ header button {
 
 .CountryPage {
   font-size: 16px;
+  background-color: hsl(0, 0%, 98%);
 }
 
-.CountryPage button {
-  margin: 20px 80px;
+.back-button {
+  margin: 60px 80px;
   padding: 10px 30px;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 0px 5px -1px hsl(0, 0%, 52%);;
 }
 
 .countrypage-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  padding: 20px 80px;
+  padding: 5px 80px;
 }
 
 .flag-container {
-  width: 80%;
-  height: 20rem;
+  width: 35%;
+  height: 19rem;
 }
 
 .flag-container img {
@@ -133,7 +140,7 @@ header button {
 }
 
 .countrypage-data {
-  margin: 20px;
+  margin: 20px 100px;
 }
 
 .countrypage-info{
@@ -141,14 +148,19 @@ header button {
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 20px;
+  line-height: 27px;
+  font-size:0.8rem;
 }
 
 .right-col {
   margin-left: 120px;
 }
+
 .countrypage-links{
-  margin-top: 80px;
+  margin-top: 40px;
+  font-size:0.8rem;
 }
+
 .bold {
-  font-weight: 800
+  font-weight: 600
 }

@@ -13,13 +13,13 @@ const CountryPage = ({ location }) => {
     return(
         <div className="CountryPage">
             <Header />
-            <button type="button" onClick={handleClick}> {`<-- Back`} </button>
+            <button className="back-button" type="button" onClick={handleClick}> {`<-- Back`} </button>
             <div className="countrypage-container">
                 <div className="flag-container">
                     <img src={`${data.flag}`} alt="flag"/>
                 </div>
                 <div className="countrypage-data">
-                    <h1>{data.name}</h1>
+                    <h2>{data.name}</h2>
                     <div className="countrypage-info">
                         <div className="left-col">
                             <p><span className="bold">Native Name: </span>{`${data.nativeName}`}</p>

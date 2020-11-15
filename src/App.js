@@ -36,7 +36,6 @@ const App = () => {
   }
 
   const filteredCountries = filtered ? data.filter( country => {
-    //let returnedCountries = []
     let countryName = country.name.toLowerCase()
     let nameToSearch = search.toLowerCase()
     let regionName = country.region.toLowerCase()
