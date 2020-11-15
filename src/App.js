@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Search from './components/Search';
-import DisplayCountries from './components/DisplayCountries';
 import axios from 'axios';
 import { useState, useEffect } from 'react'
+import HomePage from './components/HomePage'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import CountryPage from './components/CountryPage'
 
 const App = () => {
   const [data, setData] = useState([])
@@ -46,16 +46,24 @@ const App = () => {
   }) : data
   
   return(
-    <div className="App">
-      <Header />
-      <Search 
-        searchField={search} 
-        searchHandler={searchHandler} 
-        region={region} 
-        regionHandler={regionHandler}
-      />
-      <DisplayCountries data={filteredCountries} />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/country/:id">
+            <CountryPage />
+          </Route>
+          <Route path="/">
+            <HomePage
+              countries={filteredCountries}
+              searchField={search}
+              searchHandler={searchHandler}
+              region={region}
+              regionHandler={regionHandler}
+            />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   )
 }
 

@@ -102,3 +102,34 @@ header button {
 .country-data {
   padding: 5px 20px;
 }
+
+.CountryPage {
+  font-size: 16px;
+}
+.countrypage-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  width: 100%;
+}
+
+.flag-container {
+  width: 100%;
+  height: 20rem;
+}
+
+.flag-container img {
+  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.countrypage-info{
+  display: flex;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: 800
+}
