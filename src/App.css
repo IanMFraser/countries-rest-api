@@ -12,17 +12,18 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 
-header {
+.header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px; 
+  padding: 20px 80px; 
   font-weight: 800;
   border-bottom: 3px solid hsl(0, 0%, 93%) ;
   font-size: 14px;
 }
 
-header button {
+.header button {
   background-color: hsl(0, 0%, 98%);
   border: none;
   cursor: pointer;
@@ -60,11 +61,12 @@ header button {
 .display-countries {
   padding: 20px 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 4rem;
   gap: 4rem;
   justify-items: center;
   text-decoration: none;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .country-card {
@@ -77,6 +79,9 @@ header button {
   box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
 }
 
+.country-card:hover{ 
+  box-shadow: 0px 0px 15px 0px hsl(0, 0%, 41%);
+}
 .country-info {
   padding-top: 20px;
 }
@@ -115,7 +120,8 @@ header button {
   background-color: hsl(0, 0%, 98%);
   border-radius: 5px;
   border: 0;
-  box-shadow: 0px 0px 5px -1px hsl(0, 0%, 52%);;
+  box-shadow: 0px 0px 5px -1px hsl(0, 0%, 52%);
+  cursor: pointer;
 }
 
 .countrypage-container {

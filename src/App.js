@@ -13,6 +13,8 @@ const App = () => {
   const [filtered, setFiltered] = useState(false)
   const URL = `https://restcountries.eu/rest/v2/all`
 
+  console.log(region.value)
+
   useEffect(() => {
     axios.get(URL)
       .then(res => {   
@@ -24,14 +26,15 @@ const App = () => {
   }, [URL])
 
   const searchHandler = (e) => {
+    console.log(e.target.value)
     if(e.target.value === '') setFiltered(false)
     setSearch(e.target.value)
     setFiltered(true)
   }
 
-  const regionHandler = (e) => {
-    if(e.target.value === '') setFiltered(false)
-    setRegion(e.target.value)
+  const regionHandler = (e, r) => {
+    if(r.value === '') setFiltered(false)
+    setRegion(r.value);
     setFiltered(true)
   }
 
@@ -40,7 +43,7 @@ const App = () => {
     let nameToSearch = search.toLowerCase()
     let regionName = country.region.toLowerCase()
     let regionToSearch = region.toLowerCase()
-
+    
     return regionToSearch !== "" ? countryName.includes(nameToSearch) && regionName.includes(regionToSearch) : countryName.includes(nameToSearch)
   }) : data
   
