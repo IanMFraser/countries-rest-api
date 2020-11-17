@@ -11,7 +11,7 @@ html {
   --body-background: hsl(0, 0%, 98%);
   --input-text: hsl(0, 0%, 52%);
   --body-text:hsl(200, 15%, 8%);
-  --border: hsl(0, 0%, 93%);
+  --border: hsl(0, 0%, 73%);
 }
 
 .dark {
@@ -19,7 +19,7 @@ html {
   --body-background: hsl(207, 26%, 17%);
   --input-text: hsl(0, 0%, 52%);
   --body-text: hsl(0, 0%, 100%);
-  --border: hsl(0, 0%, 11%);
+  --border: hsl(0, 0%, 7%);
 }
 
 body {
