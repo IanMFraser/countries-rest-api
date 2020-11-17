@@ -6,10 +6,27 @@
   box-sizing: border-box;
 }
 
+html {
+  --elements-background: hsl(0, 0%, 100%);
+  --body-background: hsl(0, 0%, 98%);
+  --input-text: hsl(0, 0%, 52%);
+  --body-text:hsl(200, 15%, 8%);
+  --border: hsl(0, 0%, 93%);
+}
+
+.dark {
+  --elements-background: hsl(209, 23%, 22%);
+  --body-background: hsl(207, 26%, 17%);
+  --input-text: hsl(0, 0%, 52%);
+  --body-text: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 11%);
+}
+
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--light-background);
+  color: var(--body-text);
 }
 
 .header {
@@ -19,18 +36,21 @@ body {
   align-items: center;
   padding: 20px 80px; 
   font-weight: 800;
-  border-bottom: 3px solid hsl(0, 0%, 93%) ;
+  border-bottom: 3px solid var(--border);
   font-size: 14px;
+  background-color: var(--elements-background);
+  color: var(--body-text)
 }
 
 .header button {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--elements-background);
+  padding: 10px;
   border: none;
   cursor: pointer;
 }
 
 .search-bar {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--body-background);
 }
 
 .search-form {
@@ -40,23 +60,46 @@ body {
   padding: 20px 80px;
 }
 
-.search-form input, select {
+.toggle-switch {
+  display: flex;
+  align-items: center;
+}
+.toggle-switch span{
+  margin: 10px;
+}
+
+.DarkToggle.react-toggle--checked .react-toggle-track {
+  background-color: var(--body-background);
+}
+
+.DarkToggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: var(--body-background);
+}
+
+.DarkToggle.react-toggle--checked .react-toggle-thumb {
+  border-color: var(--body-background);
+}
+
+.ui.input.inputStyle>input, .ui.dropdown.dropdownStyle>dropdown{
+  background-color: var(--elements-background);
+  color: var(--body-text);
+}
+/* .search-form input, select {
   padding: 10px 20px;
   border: none;
   border-radius: 3px;
   box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(200, 15%, 8%);
+  background-color: var(--elements-background);
+  color: var(--input-text);
 } 
 
 .search-form input {
-  color: hsl(0, 0%, 52%);
   width: 34%;
 }
 
 .search-form select {
   width: 15%;
-}
+} */
 
 .display-countries {
   padding: 20px 80px;
@@ -66,17 +109,19 @@ body {
   gap: 4rem;
   justify-items: center;
   text-decoration: none;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--body-background);
 }
 
 .country-card {
   width: 100%;
-  height: 22rem;
+  height: 25rem;
   overflow: hidden;
   border-radius: 5px;
   background: white;
   margin: 5px;
   box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
+  transition: .15s;
+  background-color: var(--elements-background);
 }
 
 .country-card:hover{ 
@@ -111,13 +156,16 @@ body {
 
 .CountryPage {
   font-size: 16px;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--body-background);
+  height: 100vh;
+  color: var(--body-text)
 }
 
 .back-button {
   margin: 60px 80px;
   padding: 10px 30px;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--elements-background);
+  color: var(--body-text);
   border-radius: 5px;
   border: 0;
   box-shadow: 0px 0px 5px -1px hsl(0, 0%, 52%);
@@ -170,3 +218,4 @@ body {
 .bold {
   font-weight: 600
 }
+

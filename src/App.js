@@ -11,10 +11,10 @@ const App = () => {
   const [search, setSearch] = useState('')
   const [region, setRegion] = useState('')
   const [filtered, setFiltered] = useState(false)
+
   const URL = `https://restcountries.eu/rest/v2/all`
 
-  console.log(region.value)
-
+  //pull data from API
   useEffect(() => {
     axios.get(URL)
       .then(res => {   
@@ -25,6 +25,7 @@ const App = () => {
       })
   }, [URL])
 
+  //take input field text, sets search state and set filtered to true
   const searchHandler = (e) => {
     console.log(e.target.value)
     if(e.target.value === '') setFiltered(false)
@@ -32,12 +33,14 @@ const App = () => {
     setFiltered(true)
   }
 
+  //take value from dropdown menu and set filtered to true
   const regionHandler = (e, r) => {
     if(r.value === '') setFiltered(false)
     setRegion(r.value);
     setFiltered(true)
   }
 
+  //is filtered true? then display results that match, otherwise show all results
   const filteredCountries = filtered ? data.filter( country => {
     let countryName = country.name.toLowerCase()
     let nameToSearch = search.toLowerCase()
@@ -49,7 +52,7 @@ const App = () => {
   
   return(
     <Router>
-      <div className="App">
+      <div className='App'>
         <Switch>
           <Route path="/country/:id">
             <CountryPage />
