@@ -49,21 +49,11 @@ body {
   cursor: pointer;
 }
 
-.search-bar {
-  background-color: var(--body-background);
-}
-
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
-}
-
 .toggle-switch {
   display: flex;
   align-items: center;
 }
+
 .toggle-switch span{
   margin: 10px;
 }
@@ -80,6 +70,17 @@ body {
   border-color: var(--body-background);
 }
 
+.search-bar {
+  background-color: var(--body-background);
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
 .ui.input.inputStyle>input, .ui.input.inputStyle>input:focus {
   background: var(--elements-background);
   color: var(--body-text);
@@ -94,22 +95,6 @@ body {
 .ui.icon.input {
   color: var(--body-text)
 }
-/* .search-form input, select {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
-  background-color: var(--elements-background);
-  color: var(--input-text);
-} 
-
-.search-form input {
-  width: 34%;
-}
-
-.search-form select {
-  width: 15%;
-} */
 
 .display-countries {
   padding: 20px 80px;
@@ -120,6 +105,7 @@ body {
   justify-items: center;
   text-decoration: none;
   background-color: var(--body-background);
+
 }
 
 .country-card {
@@ -129,14 +115,14 @@ body {
   border-radius: 5px;
   background: white;
   margin: 5px;
-  box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
+  box-shadow: 1px 2px 5px -3px var(--border);
   transition: .15s;
   background-color: var(--elements-background);
   color:var(--body-text);
 }
 
 .country-card:hover{ 
-  box-shadow: 0px 0px 15px 0px hsl(0, 0%, 41%);
+  box-shadow: 0px 0px 15px 0px var(--border);
 }
 .country-info {
   padding-top: 20px;
@@ -229,4 +215,3 @@ body {
 .bold {
   font-weight: 600
 }
-
