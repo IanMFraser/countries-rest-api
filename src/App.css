@@ -80,8 +80,14 @@ body {
   border-color: var(--body-background);
 }
 
-.ui.input.inputStyle>input, .ui.dropdown.dropdownStyle>dropdown{
-  background-color: var(--elements-background);
+.ui.input.inputStyle>input, .ui.input.inputStyle>input:focus {
+  background: var(--elements-background);
+  color: var(--body-text);
+}
+
+.ui.selection.dropdown.dropdownStyle , .ui.selection.dropdown.dropdownStyle .menu>.item{
+  background:var(--elements-background);
+  border-top: 1px solid var(--elements-background);
   color: var(--body-text);
 }
 /* .search-form input, select {
@@ -122,6 +128,7 @@ body {
   box-shadow: 1px 2px 5px -3px hsl(0, 0%, 52%);
   transition: .15s;
   background-color: var(--elements-background);
+  color:var(--body-text);
 }
 
 .country-card:hover{ 
