@@ -5,7 +5,7 @@ import "react-toggle/style.css"
 const Header = () => {
     
     const DARK_CLASS = "dark"
-    const [isDark, setIsDark] = useState('')
+    const [isDark, setIsDark] = useState(false)
   
     useEffect(() => {
         if(isDark) {

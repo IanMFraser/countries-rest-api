@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from './Header'
 import { useHistory, withRouter } from 'react-router-dom'
+import DisplayBorderCountries from './DisplayBorderCountries'
 
 const CountryPage = ({ location }) => {
     const data = location.state.countryData
     let history = useHistory()
-    
+   
     const handleClick = () => {
         history.push("/")
     }
@@ -35,7 +36,7 @@ const CountryPage = ({ location }) => {
                         </div>
                     </div>
                     <div className="countrypage-links">
-                        <p><span className="bold">Border Countries: </span>{ data.borders.map(c => `${c} `)}</p>
+                       { data.borders.length > 0 ? <div><span className="bold">Border Countries: </span><DisplayBorderCountries borders={data.borders}/></div> : null}
                     </div>
                 </div>
             </div>
