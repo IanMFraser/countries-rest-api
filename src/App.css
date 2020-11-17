@@ -90,6 +90,10 @@ body {
   border-top: 1px solid var(--elements-background);
   color: var(--body-text);
 }
+
+.ui.icon.input {
+  color: var(--body-text)
+}
 /* .search-form input, select {
   padding: 10px 20px;
   border: none;
