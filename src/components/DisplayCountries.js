@@ -10,7 +10,7 @@ const DisplayCountries = ({data}) => {
                 return (
                     <Link key={country.name} 
                         to={{
-                        pathname: `/country/${country.name}`,
+                        pathname: `/country/${country.name.replace(/\s/g, '')}`,
                         state: {countryData: country}}}
                     >
                         <CountryCard  
