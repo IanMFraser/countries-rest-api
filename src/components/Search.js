@@ -15,25 +15,23 @@ const Search = ({searchField, searchHandler, region, regionHandler}) => {
 
     return(
         <div className="search-bar">
-            <form className="search-form">
-                <Input 
-                    className="ui input inputStyle"  
-                    icon="search" 
-                    iconPosition="left" 
-                    placeholder="Search for a country ..." 
-                    value={searchField} 
-                    onChange={searchHandler} 
-                />
-                <Dropdown 
-                    className="dropdownStyle" 
-                    floating 
-                    selection 
-                    placeholder="Filter By Region..." 
-                    options={options} 
-                    value={region} 
-                    onChange={regionHandler}
-                />
-            </form>
+            <Input 
+                className="ui input inputStyle"  
+                icon="search" 
+                iconPosition="left" 
+                placeholder="Search for a country ..." 
+                value={searchField} 
+                onChange={searchHandler} 
+            />
+            <Dropdown 
+                className="dropdownStyle" 
+                floating 
+                selection 
+                placeholder="Filter By Region..." 
+                options={options} 
+                value={region} 
+                onChange={regionHandler}
+            />
         </div>
     )
 }

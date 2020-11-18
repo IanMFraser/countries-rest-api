@@ -72,14 +72,18 @@ body {
 
 .search-bar {
   background-color: var(--body-background);
-}
-
-.search-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
 }
+
+/* .search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+} */
 
 .ui.input.inputStyle {
   width: 30%;
@@ -251,7 +255,7 @@ body {
     font-size: 0.98rem;
   }
 
-  .search-form {
+  .search-bar {
     display: flex;
     flex-direction: column;
     padding: 20px;
