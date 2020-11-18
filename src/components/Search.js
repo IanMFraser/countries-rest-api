@@ -17,8 +17,7 @@ const Search = ({searchField, searchHandler, region, regionHandler}) => {
         <div className="search-bar">
             <form className="search-form">
                 <Input 
-                    className="ui input inputStyle" 
-                    style={{width:"30%"}} 
+                    className="ui input inputStyle"  
                     icon="search" 
                     iconPosition="left" 
                     placeholder="Search for a country ..." 

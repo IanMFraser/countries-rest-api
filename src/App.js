@@ -51,7 +51,7 @@ const App = () => {
     return regionToSearch !== "" ? countryName.includes(nameToSearch) && regionName.includes(regionToSearch) : countryName.includes(nameToSearch)
   }) : data
   
-  //dark mode?
+  //are we in dark mode? true or false
   const darkModeHandler = (e) => {
    setIsDark(e.target.checked)
   }

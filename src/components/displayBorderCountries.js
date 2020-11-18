@@ -4,9 +4,9 @@ import json from '../countries'
 const DisplayBorderCountries = ({borders}) => {
     const countries = json;
     const borderingCountries = borders
-    
+
     return(
-        <div>
+        <div className="border-links">
             {   
                 countries.map(country => {
                         return borderingCountries.includes(country.code) ? 

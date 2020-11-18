@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Toggle from 'react-toggle';
 import "react-toggle/style.css"
 
 const Header = ({isDark, darkModeHandler}) => {
     
     const DARK_CLASS = "dark"
-    //const [isDark, setIsDark] = useState(false)
   
     useEffect(() => {
         if(isDark) {

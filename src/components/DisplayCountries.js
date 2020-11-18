@@ -11,14 +11,14 @@ const DisplayCountries = ({data}) => {
                     <Link key={country.name} 
                         to={{
                         pathname: `/country/${country.name}`,
-                        state: {countryData: country}
-                    }}>
+                        state: {countryData: country}}}
+                    >
                         <CountryCard  
-                            flag={country.flag} 
-                            name={country.name} 
-                            pop={country.population} 
-                            region={country.region} 
-                            capital={country.capital} 
+                                flag={country.flag} 
+                                name={country.name} 
+                                pop={country.population} 
+                                region={country.region} 
+                                capital={country.capital} 
                         />
                     </Link>
                 )
