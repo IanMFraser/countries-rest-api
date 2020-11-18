@@ -261,6 +261,13 @@ body {
     padding: 20px;
   }
 
+  .display-countries {
+    padding: 0 80px;
+  }
+
+  .country-card {
+    height: 30rem;
+  }
   .ui.input.inputStyle {
     width: 100%;
   } 
@@ -300,6 +307,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
   .countrypage-links {
     display:flex;
     flex-direction: column;
