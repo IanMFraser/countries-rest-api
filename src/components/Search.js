@@ -21,7 +21,8 @@ const Search = ({searchField, searchHandler, region, regionHandler}) => {
                 iconPosition="left" 
                 placeholder="Search for a country ..." 
                 value={searchField} 
-                onChange={searchHandler} 
+                onChange={searchHandler}
+                aria-label="search-input" 
             />
             <Dropdown 
                 className="dropdownStyle" 
