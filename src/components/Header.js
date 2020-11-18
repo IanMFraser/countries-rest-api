@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Toggle from 'react-toggle';
 import "react-toggle/style.css"
 
-const Header = () => {
+const Header = ({isDark, darkModeHandler}) => {
     
     const DARK_CLASS = "dark"
-    const [isDark, setIsDark] = useState(false)
+    //const [isDark, setIsDark] = useState(false)
   
     useEffect(() => {
         if(isDark) {
@@ -23,7 +23,7 @@ const Header = () => {
                 <Toggle
                     className="DarkToggle"
                     checked={isDark}
-                    onChange={e => setIsDark(e.target.checked)}
+                    onChange={darkModeHandler}
                     icons={false}
                     aria-label="Dark mode"
                 />

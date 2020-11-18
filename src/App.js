@@ -11,6 +11,7 @@ const App = () => {
   const [search, setSearch] = useState('')
   const [region, setRegion] = useState('')
   const [filtered, setFiltered] = useState(false)
+  const [isDark, setIsDark] = useState(false)
 
   const URL = `https://restcountries.eu/rest/v2/all`
 
@@ -50,12 +51,17 @@ const App = () => {
     return regionToSearch !== "" ? countryName.includes(nameToSearch) && regionName.includes(regionToSearch) : countryName.includes(nameToSearch)
   }) : data
   
+  //dark mode?
+  const darkModeHandler = (e) => {
+   setIsDark(e.target.checked)
+  }
+
   return(
     <Router>
       <div className='App'>
         <Switch>
           <Route path="/country/:id">
-            <CountryPage />
+            <CountryPage isDark={isDark} darkModeHandler={darkModeHandler} />
           </Route>
           <Route path="/">
             <HomePage
@@ -64,6 +70,8 @@ const App = () => {
               searchHandler={searchHandler}
               region={region}
               regionHandler={regionHandler}
+              isDark={isDark}
+              darkModeHandler={darkModeHandler}
             />
           </Route>
         </Switch>

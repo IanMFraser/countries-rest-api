@@ -3,7 +3,8 @@ import Header from './Header'
 import { useHistory, withRouter } from 'react-router-dom'
 import DisplayBorderCountries from './DisplayBorderCountries'
 
-const CountryPage = ({ location }) => {
+const CountryPage = ({ location, isDark, darkModeHandler }) => {
+    
     const data = location.state.countryData
     let history = useHistory()
    
@@ -13,7 +14,7 @@ const CountryPage = ({ location }) => {
 
     return(
         <div className="CountryPage">
-            <Header />
+            <Header isDark={isDark} darkModeHandler={darkModeHandler} />
             <button className="back-button" type="button" onClick={handleClick}> {`<-- Back`} </button>
             <div className="countrypage-container">
                 <div className="flag-container">
@@ -35,9 +36,13 @@ const CountryPage = ({ location }) => {
                             <p><span className="bold">Languages: </span>{`${data.languages.map(lan => lan.name)} `} </p>
                         </div>
                     </div>
-                    <div className="countrypage-links">
-                       { data.borders.length > 0 ? <div><span className="bold">Border Countries: </span><DisplayBorderCountries borders={data.borders}/></div> : null}
-                    </div>
+                    {  
+                        data.borders.length > 0 ? 
+                            <div className="countrypage-links">
+                                <h5>Border Countries: </h5>
+                                <DisplayBorderCountries borders={data.borders}/>
+                            </div> : null
+                    }
                 </div>
             </div>
         </div>
