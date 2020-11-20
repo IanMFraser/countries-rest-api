@@ -76,7 +76,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 40px 80px;
 }
 
 /* .search-form {
@@ -95,10 +95,15 @@ body {
   color: var(--body-text);
 }
 
+.ui.input.inputStyle>input{
+  padding: 20px;
+}
+
 .ui.selection.dropdown.dropdownStyle , .ui.selection.dropdown.dropdownStyle .menu>.item{
   background:var(--elements-background);
   border-top: 1px solid var(--elements-background);
   color: var(--body-text);
+  padding: 20px;
 }
 
 .ui.selection.dropdown.dropdownStyle .menu>.item:hover{
@@ -271,7 +276,7 @@ body {
   } 
 
   .ui.input.inputStyle>input{
-    padding: 15px;
+    padding: 20px;
   }
 
   .ui.dropdown.dropdownStyle{

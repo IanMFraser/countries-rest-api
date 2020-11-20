@@ -19,7 +19,7 @@ const App = () => {
   //pull data from API
   useEffect(() => {
     const fetchData = async () => {
-      try{
+      try {
         const result = await axios.get(URL);
         setData(result.data)
       } catch (error) {
@@ -31,7 +31,6 @@ const App = () => {
 
   //take input field text, sets search state and set filtered to true
   const searchHandler = (e) => {
-    console.log(e.target.value)
     if(e.target.value === '') setFiltered(false)
     setSearch(e.target.value)
     setFiltered(true)
@@ -73,7 +72,7 @@ const App = () => {
       <div className='App'>
         <Header isDark={isDark} darkModeHandler={darkModeHandler}/>
         <Switch>
-          <Route path="/country/:id" component={CountryPage}>
+          <Route path="/country/:id">
             <CountryPage />
           </Route>
           <Route path="/">
