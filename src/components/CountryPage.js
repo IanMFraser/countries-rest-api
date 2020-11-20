@@ -3,7 +3,7 @@ import { useHistory, withRouter } from 'react-router-dom'
 import DisplayBorderCountries from './DisplayBorderCountries'
 
 
-const CountryPage = ({ location}) => {
+const CountryPage = ({ location }) => {
 
     const data = location.state.countryData
     let history = useHistory()

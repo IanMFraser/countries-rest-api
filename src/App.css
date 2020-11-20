@@ -44,6 +44,7 @@ body {
 
 .header button {
   background-color: var(--elements-background);
+  color: var(--body-text);
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -103,6 +104,7 @@ body {
 .ui.selection.dropdown.dropdownStyle .menu>.item:hover{
   background-color: var(--body-background);
 }
+
 .ui.icon.input {
   color: var(--body-text)
 }
@@ -264,14 +266,6 @@ body {
     padding: 20px;
   }
 
-  .display-countries {
-    padding: 0 40px;
-  }
-
-  .country-card {
-    height: 23rem;
-  }
-
   .ui.input.inputStyle {
     width: 100%;
   } 
@@ -282,6 +276,14 @@ body {
 
   .ui.dropdown.dropdownStyle{
     margin: 30px 135px 20px 0;
+  }
+
+  .display-countries {
+    padding: 0 40px;
+  }
+
+  .country-card {
+    height: 23rem;
   }
 
   .CountryPage {

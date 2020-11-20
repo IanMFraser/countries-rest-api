@@ -55,8 +55,8 @@ const App = () => {
   }) : data
   
   //are we in dark mode? true or false
-  const darkModeHandler = (e) => {
-   setIsDark(e.target.checked)
+  const darkModeHandler = () => {
+   setIsDark(!isDark)
   }
 
   //when isDark state changes value, change the CSS class to dark mode
@@ -73,7 +73,7 @@ const App = () => {
       <div className='App'>
         <Header isDark={isDark} darkModeHandler={darkModeHandler}/>
         <Switch>
-          <Route path="/country/:id">
+          <Route path="/country/:id" component={CountryPage}>
             <CountryPage />
           </Route>
           <Route path="/">
