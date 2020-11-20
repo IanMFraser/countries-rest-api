@@ -1,10 +1,9 @@
 import React from 'react'
-import Header from './Header'
 import { useHistory, withRouter } from 'react-router-dom'
 import DisplayBorderCountries from './DisplayBorderCountries'
 
 
-const CountryPage = ({ location, isDark, darkModeHandler }) => {
+const CountryPage = ({ location}) => {
 
     const data = location.state.countryData
     let history = useHistory()
@@ -15,7 +14,6 @@ const CountryPage = ({ location, isDark, darkModeHandler }) => {
 
     return(
         <div className="CountryPage">
-            <Header isDark={isDark} darkModeHandler={darkModeHandler} />
             <button className="back-button" type="button" onClick={handleClick}> {`\u2190 Back`} </button>
             <div className="countrypage-container">
                 <div className="flag-container">

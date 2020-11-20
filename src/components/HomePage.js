@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from './Header';
 import Search from './Search';
 import DisplayCountries from './DisplayCountries';
 
-const HomePage = ({ countries, searchField, searchHandler, region, regionHandler, isDark, darkModeHandler }) => {
+const HomePage = ({ countries, searchField, searchHandler, region, regionHandler }) => {
     return(
         <div className="HomePage">
-            <Header isDark={isDark} darkModeHandler={darkModeHandler}/>
             <Search 
                 searchField={searchField} 
                 searchHandler={searchHandler} 

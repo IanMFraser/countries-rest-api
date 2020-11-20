@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import './App.css';
 import axios from 'axios';
-import { useState, useEffect } from 'react'
 import HomePage from './components/HomePage'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CountryPage from './components/CountryPage'
+import Header from './components/Header';
 
 const App = () => {
   const [data, setData] = useState([])
@@ -14,16 +14,19 @@ const App = () => {
   const [isDark, setIsDark] = useState(false)
 
   const URL = `https://restcountries.eu/rest/v2/all`
+  const DARK_CLASS = "dark"
 
   //pull data from API
   useEffect(() => {
-    axios.get(URL)
-      .then(res => {   
-        setData(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    const fetchData = async () => {
+      try{
+        const result = await axios.get(URL);
+        setData(result.data)
+      } catch (error) {
+          console.log(error)
+        }
+    }
+    fetchData()
   }, [URL])
 
   //take input field text, sets search state and set filtered to true
@@ -56,12 +59,22 @@ const App = () => {
    setIsDark(e.target.checked)
   }
 
+  //when isDark state changes value, change the CSS class to dark mode
+  useEffect(() => {
+      if(isDark) {
+          document.documentElement.classList.add(DARK_CLASS)
+      } else {
+          document.documentElement.classList.remove(DARK_CLASS)
+      }
+  }, [isDark])
+
   return(
     <Router>
       <div className='App'>
+        <Header isDark={isDark} darkModeHandler={darkModeHandler}/>
         <Switch>
           <Route path="/country/:id">
-            <CountryPage isDark={isDark} darkModeHandler={darkModeHandler} />
+            <CountryPage />
           </Route>
           <Route path="/">
             <HomePage
@@ -70,8 +83,6 @@ const App = () => {
               searchHandler={searchHandler}
               region={region}
               regionHandler={regionHandler}
-              isDark={isDark}
-              darkModeHandler={darkModeHandler}
             />
           </Route>
         </Switch>
